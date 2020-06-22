@@ -8,7 +8,7 @@ import java.util.List;
 import br.com.caelum.ingresso.model.Sessao;
 
 public class GerenciadorDeSessao {
-	
+
 	private List<Sessao> sessoesDaSala;
 	
 	public GerenciadorDeSessao(List<Sessao> sessoesDaSala) {
@@ -20,6 +20,8 @@ public class GerenciadorDeSessao {
 			return false;
 		}
 		
+		//Nenhuma sessaoExistente poderá ter horário conflitante com a sessaoNova
+		//noneMatch() é um oeração de curto circuito. Após o primeiro teste ele finaliza, não necessitando chegar no final da lista.
 		return sessoesDaSala.stream().noneMatch(sessaoExistente -> horarioIsConflitante(sessaoExistente, sessaoNova));
 	}
 	
