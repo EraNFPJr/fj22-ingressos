@@ -13,9 +13,9 @@ public class TestaStreams {
 
 	public static void main(String[] args) {
 	
-		Filme f1 = new Filme("Jogador N1", Duration.ofHours(1), "Acao");
-		Filme f2 = new Filme("Matriz", Duration.ofHours(1), "Drama");
-		Filme f3 = new Filme("Casamento grego", Duration.ofHours(1), "Drama");
+		Filme f1 = new Filme("Jogador N1", Duration.ofHours(1), "Acao", null);
+		Filme f2 = new Filme("Matriz", Duration.ofHours(1), "Drama",null);
+		Filme f3 = new Filme("Casamento grego", Duration.ofHours(1), "Drama",null);
 		
 		List<Filme> filmes = Arrays.asList(f1,f2,f3);
 
